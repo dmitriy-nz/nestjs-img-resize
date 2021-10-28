@@ -1,6 +1,6 @@
 {
   "name": "nestjs-img-resize",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "",
   "main": "dist/index",
   "types": "dist/index",
@@ -8,7 +8,8 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "build": "rimraf dist && tsc",
     "prepublish": "npm run build",
-    "test:e2e": "jest --config ./test/jest-e2e.json"
+    "test:e2e": "jest --config ./test/jest-e2e.json",
+    "benchmark": "ts-node ./test/benchmark.ts"
   },
   "repository": {
     "type": "git",
@@ -24,16 +25,19 @@
     "@nestjs/core": "^7.3.0",
     "@nestjs/platform-express": "^7.6.17",
     "@nestjs/testing": "^7.6.17",
+    "@types/benchmark": "^2.1.1",
     "@types/jest": "^26.0.23",
     "@types/node": "^14.14.41",
     "@types/supertest": "^2.0.11",
-    "reflect-metadata": "^0.1.13",
+    "benchmark": "^2.1.4",
+    "file-type": "^16.5.3",
     "jest": "^26.6.3",
+    "reflect-metadata": "^0.1.13",
     "rimraf": "^3.0.2",
     "supertest": "^6.1.3",
     "ts-jest": "^26.5.6",
-    "typescript": "^4.2.4",
-    "file-type": "^16.5.3"
+    "ts-node": "^10.4.0",
+    "typescript": "^4.2.4"
   },
   "peerDependencies": {
     "@nestjs/common": "^7.3.0",

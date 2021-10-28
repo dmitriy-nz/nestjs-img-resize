@@ -41,8 +41,6 @@ describe('Convert image type', () => {
 
     const resizedFileType = await fromBuffer(resizedImg);
     expect(resizedFileType.ext).toEqual(ImageTypes.jpg);
-
-    fs.writeFileSync('test.jpg', resizedImg);
   });
 
   it('Convert image from tiff to jpg', async () => {

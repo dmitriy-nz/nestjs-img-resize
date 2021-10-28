@@ -111,6 +111,26 @@ extends ImgConvertConfig
 | outType          | ImageTypes  | Output Image Format, default jpeg                                                                                            |
 | fillAlpha        | string      | Fill the alpha channel with a specific color, useful when converting a format with an alpha channel to a format without it  |
 
+## Benchmark
+
+```shell
+npm run benchmark
+```
+
+### Benchmark results
+
+The results depend on the characteristics of the machine on which the test is performed.  
+My results on Intel Core i5-10300H CPU @ 2.50GHz × 8, 15,5 GiB, Ubuntu 20.04.2 LTS
+
+#### v1.0.0
+
+```shell
+Resize jpg 1920x1080 to 500x281 --> 9.81338447508557 ops/sec | Samples: 49
+Resize png 1920x1080 to 500x281 --> 4.821842038356058 ops/sec | Samples: 27
+Convert 650x434 png to jpg --> 28.200684305778598 ops/sec | Samples: 68
+Convert 650x434 tiff to jpg --> 25.820336860905076 ops/sec | Samples: 45
+```
+
 ## Tests
 
 ```shell
@@ -118,4 +138,5 @@ npm run test:e2e
 ```
 
 ## License
+
 [MIT](LICENSE)
